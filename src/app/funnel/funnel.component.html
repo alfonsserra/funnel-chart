@@ -1,0 +1,16 @@
+<div style="height:500px;width:500px;margin:auto;">
+    <svg id="funnel-container" perspectiveAspectRatio="none">
+        <svg class="labels" height="100%" width="75%" viewBox="-25 0 100 100" overflow="visible">
+        </svg>
+        <svg class="funnel" height="100%" width="75%" viewBox="0 0 100 100">
+            <defs>
+                <clipPath id="funnel-clip">
+                    <polygon points="0 0, 100 0,  80 100, 20 100"></polygon>
+                </clipPath>
+            </defs>
+            <rect height="100%" width="100%" fill="white" clip-path="#funnel-clip" style="clip-path:url('#funnel-clip');"></rect>
+
+            <g class="levels" clip-path="#funnel-clip" style="clip-path:url('#funnel-clip');"></g>
+        </svg>
+    </svg>
+</div>
