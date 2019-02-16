@@ -8,8 +8,8 @@ export class Level {
 
 @Component({
 	selector:    'app-funnel',
-	templateUrl: './funnel.component.html',
-	styleUrls:   ['./funnel.component.scss']
+	templateUrl: 'funnel.component.html',
+	styleUrls:   ['funnel.component.scss']
 })
 export class FunnelComponent implements OnChanges {
 
@@ -46,8 +46,11 @@ export class FunnelComponent implements OnChanges {
 		rect.setAttribute('y', y.toString());
 		rect.setAttribute('fill', level.color);
 		rect.setAttribute('title', level.label);
+		rect.setAttribute('class', 'level-rect');
 		document.querySelector('.funnel g.levels')
 			.appendChild(rect);
+		rect.onclick = (event) => this.onClick(event, level);
+
 	}
 
 	private createLabel(height, level: Level, y: number) {
@@ -76,9 +79,16 @@ export class FunnelComponent implements OnChanges {
 		tspan2.setAttribute('y', (yPos + 3.5).toString());
 		tspan1.appendChild(textNode1);
 		tspan2.appendChild(textNode2);
+		tspan1.onclick = (event) => this.onClick(event, level);
+		tspan2.onclick = (event) => this.onClick(event, level);
+
 		text.appendChild(tspan1);
 		text.appendChild(tspan2);
 		labels.appendChild(line);
 		labels.appendChild(text); // Append the line and label to the SVG.
+	}
+
+	public onClick(event: any, level: Level) {
+		console.log(level);
 	}
 }

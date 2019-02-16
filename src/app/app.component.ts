@@ -6,7 +6,7 @@ import { Level } from './funnel/funnel.component';
 	templateUrl: './app.component.html'
 })
 export class AppComponent implements OnInit {
-	title = 'The funnel app';
+	title = 'My funnel';
 
 	public data: Array<Level> = [];
 
@@ -20,6 +20,6 @@ export class AppComponent implements OnInit {
 		this.data.push(new Level('Asset Discovery', 500000, '#fda44a'));
 		this.data.push(new Level('Asset Discovery', 500000, '#88df75'));
 		this.data.push(new Level('Asset Discovery', 500000, '#149564'));
-		this.data.push(new Level('Asset Discovery', 1000, '#redd'));
+		this.data.push(new Level('Asset Discovery', 10000, 'red'));
 	}
 }
