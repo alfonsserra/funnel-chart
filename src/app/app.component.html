@@ -1,9 +1,15 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div class="container-fluid">
-  <div class="mt-3" style="text-align:center">
-    <h1>
-     {{ title }}
-    </h1>
-    <app-funnel [data]="data"></app-funnel>
-  </div>
+<div class="h-100 d-flex flex-column">
+    <systelab-dialog-header (close)="doRefresh();">Dialog title</systelab-dialog-header>
+    <div class="slab-flex-1 d-flex flex-row">
+        <app-funnel [data]="data" style="width: 500px;"></app-funnel>
+        <div class="container-fluid slab-flex-1" style="background-color: lightblue"></div>
+        <app-filter></app-filter>
+    </div>
+    <systelab-dialog-bottom>
+        <button type="button" class="btn ml-2" (click)="doRefresh()"> Button 1</button>
+        <button type="button" class="btn ml-2" (click)="doRefresh()"> Button 2</button>
+        <button type="button" class="btn ml-2" (click)="doRefresh()"> Button 3</button>
+        <button type="button" class="btn ml-auto" (click)="doRefresh()"> Refresh</button>
+    </systelab-dialog-bottom>
 </div>
