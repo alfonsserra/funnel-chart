@@ -21,7 +21,7 @@
     "@angular/platform-browser": "7.2.5",
     "@angular/platform-browser-dynamic": "7.2.5",
     "@angular/router": "7.2.5",
-    "core-js": "^2.6.1",
+    "core-js": "^2.6.5",
     "rxjs": "6.4.0",
     "systelab-components": "^8.0.4",
     "systelab-login": "^6.0.1",
