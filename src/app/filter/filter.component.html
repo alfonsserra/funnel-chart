@@ -1,3 +1,44 @@
-<div style="width: 300px; background-color: antiquewhite">
-  <systelab-datepicker [(currentDate)]="fromDate" [inline]="true"></systelab-datepicker>
+<div class="d-flex flex-column" style="width: 370px;">
+  <div class="container-fluid">
+    <form>
+      <div class="row mt-1">
+        <div class="col-md-12">
+          <label class="col-form-label text-truncate" for="field-1">Line 1</label>
+          <input type="text" class="form-control">
+        </div>
+      </div>
+      <div class="row mt-1">
+        <div class="col-md-12">
+          <label class="col-form-label text-truncate" for="field-1">Line 1</label>
+          <input type="text" class="form-control">
+        </div>
+      </div>
+      <div class="row mt-1">
+        <div class="col-md-12">
+          <label class="col-form-label text-truncate" for="field-1">Line 1</label>
+          <input type="text" class="form-control">
+        </div>
+      </div>
+      <div class="row mt-1">
+        <div class="col-md-6">
+          <label class="col-form-label text-truncate" for="field-2a">Line 2.a</label>
+          <input type="text" class="form-control">
+        </div>
+        <div class="col-md-6">
+          <label class="col-form-label text-truncate" for="field-2b">Line 2.b</label>
+          <input type="text" class="form-control">
+        </div>
+      </div>
+      <div class="row mt-1">
+        <div class="col-md-12">
+        <label class="col-form-label text-truncate" for="field-1">Line 1</label>
+        <systelab-datepicker [(currentDate)]="fromDate" [inline]="true"></systelab-datepicker>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <div class="slab-flex-1">
+
+  </div>
 </div>

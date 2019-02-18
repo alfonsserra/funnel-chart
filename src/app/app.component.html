@@ -2,9 +2,13 @@
 <div class="h-100 d-flex flex-column">
     <systelab-dialog-header (close)="doRefresh();">Dialog title</systelab-dialog-header>
     <div class="slab-flex-1 d-flex flex-row">
-        <app-funnel [data]="data" style="width: 500px;"></app-funnel>
-        <div class="container-fluid slab-flex-1" style="background-color: lightblue"></div>
-        <app-filter></app-filter>
+        <app-funnel [data]="data" class="ml-3" style="width: 500px;"></app-funnel>
+        <div class="container-fluid slab-flex-1" style="background-color: white">
+            <app-percentage-circle></app-percentage-circle>
+        </div>
+        <div class="d-none d-md-block border-left" [style.overflow]="'hidden'" style="background-color: rgba(53,58,64,0.12)">
+            <app-filter class="d-flex flex-row"></app-filter>
+        </div>
     </div>
     <systelab-dialog-bottom>
         <button type="button" class="btn ml-2" (click)="doRefresh()"> Button 1</button>
