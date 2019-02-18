@@ -1,7 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Level } from './funnel/funnel.component';
 import { I18nService } from 'systelab-translate/lib/i18n.service';
-import { LocalStorageService } from 'systelab-preferences/lib/local-storage.service';
 
 @Component({
 	selector:    'app-root',
@@ -12,7 +11,7 @@ export class AppComponent implements OnInit {
 
 	public data: Array<Level> = [];
 
-	constructor(protected preferencesService: LocalStorageService, protected i18nService: I18nService) {
+	constructor(protected i18nService: I18nService) {
 		try {
 			const lang = 'en';
 			i18nService.use(lang)
@@ -22,7 +21,6 @@ export class AppComponent implements OnInit {
 		} catch (e) {
 			console.log(e);
 		}
-
 	}
 
 	public ngOnInit() {
